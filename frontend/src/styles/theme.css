@@ -1,0 +1,78 @@
+:root {
+  --bg-canvas: #0b0e14;
+  --bg-canvas-dot: #171b26;
+  --bg-panel: #12151ce6;
+  --bg-panel-solid: #12151c;
+  --bg-elevated: #191d27;
+  --border-subtle: #1f2430;
+  --border-hover: #2a3142;
+
+  --text-primary: #e7e9ee;
+  --text-secondary: #9298ab;
+  --text-tertiary: #5c6178;
+
+  --accent-1: #6366f1;
+  --accent-2: #a855f7;
+  --accent-gradient: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
+  --accent-glow: 0 0 0 1px rgba(99, 102, 241, 0.4), 0 0 24px rgba(139, 92, 246, 0.25);
+
+  --teal: #2dd4bf;
+  --amber: #f59e0b;
+  --rose: #f43f5e;
+
+  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-panel: 0 8px 32px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+  --shadow-float: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] {
+  --bg-canvas: #f6f7fb;
+  --bg-canvas-dot: #e9ebf3;
+  --bg-panel: #ffffffdd;
+  --bg-panel-solid: #ffffff;
+  --bg-elevated: #ffffff;
+  --border-subtle: #e3e6ef;
+  --border-hover: #cdd2e0;
+  --text-primary: #171923;
+  --text-secondary: #565c72;
+  --text-tertiary: #8b91a5;
+  --shadow-panel: 0 8px 32px rgba(30, 34, 60, 0.08), 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font-family: var(--font-ui);
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: rgba(99, 102, 241, 0.35); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 8px; border: 2px solid var(--bg-canvas); }
+.glass-panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-panel);
+}
+.gradient-text {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+button { font-family: inherit; }
+:focus-visible { outline: 2px solid var(--accent-1); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}

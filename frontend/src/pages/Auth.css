@@ -1,0 +1,48 @@
+.vf-auth {
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  position: relative;
+  background: radial-gradient(ellipse 700px 500px at 50% 0%, rgba(99,102,241,0.14), transparent 60%), var(--bg-canvas);
+  padding: 24px;
+}
+.vf-auth__logo { position: absolute; top: 28px; left: 40px; font-size: 17px; font-weight: 800; text-decoration: none; }
+.vf-auth__card { width: 100%; max-width: 380px; padding: 32px; }
+.vf-auth__card h1 { font-size: 21px; margin: 0 0 4px; }
+.vf-auth__subtitle { font-size: 13px; color: var(--text-secondary); margin: 0 0 22px; }
+
+.vf-auth__social { display: flex; gap: 10px; }
+.vf-auth__socialbtn {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 9px; border-radius: 9px; border: 1px solid var(--border-subtle);
+  background: var(--bg-elevated); color: var(--text-primary); font-size: 12.5px; font-weight: 500; cursor: pointer;
+}
+.vf-auth__socialbtn:hover { border-color: var(--border-hover); }
+
+.vf-auth__divider { display: flex; align-items: center; gap: 10px; margin: 18px 0; color: var(--text-tertiary); font-size: 11px; }
+.vf-auth__divider::before, .vf-auth__divider::after { content: ''; flex: 1; height: 1px; background: var(--border-subtle); }
+
+.vf-auth__form { display: flex; flex-direction: column; gap: 12px; }
+.vf-auth__field {
+  display: flex; align-items: center; gap: 9px;
+  padding: 10px 12px; border-radius: 9px; border: 1px solid var(--border-subtle); background: var(--bg-elevated);
+  color: var(--text-tertiary);
+}
+.vf-auth__field input {
+  border: none; outline: none; background: transparent; color: var(--text-primary); font-size: 13px; width: 100%;
+}
+.vf-auth__error { font-size: 11px; color: var(--rose); margin-top: -6px; }
+
+.vf-auth__row { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: var(--text-secondary); }
+.vf-auth__row a { color: var(--text-secondary); }
+.vf-auth__remember { display: flex; align-items: center; gap: 6px; }
+
+.vf-auth__submit {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 11px; border: none; border-radius: 10px; background: var(--accent-gradient);
+  color: white; font-weight: 600; font-size: 13.5px; cursor: pointer; margin-top: 4px;
+  box-shadow: 0 6px 20px rgba(99,102,241,0.3);
+}
+.vf-auth__submit:disabled { opacity: 0.6; cursor: default; }
+
+.vf-auth__switch { text-align: center; font-size: 12.5px; color: var(--text-secondary); margin-top: 20px; }
+.vf-auth__sent { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
